@@ -1,10 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
+.main {
+    // background-color: rebeccapurple;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-areas: "taskList" "form";
+    grid-template-rows: auto;
+    justify-content: space-between;
+    padding: 2%;
+
+    .taskList {
+        grid-area: "taskList";
+        // background-color: burlywood;
+        padding: 2%;
+
+    }
+
+    .form {
+        grid-area: "form";
+        // background-color: whitesmoke;
+        padding: 2%;
+
+    }
 }
