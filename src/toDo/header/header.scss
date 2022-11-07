@@ -1,0 +1,58 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: blue;
+
+    &__menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+
+            .menu__line {
+                background: transparent;
+                &::before {
+                    transform: rotate(45deg)
+                }
+                &::after {
+                    transform: rotate(-45deg)
+                }
+            }
+        }
+
+
+        .menu__line {
+            width: 40px;
+            height: 2px;
+            background-color: white;
+            transition: all .5s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                background-color: white;
+                transition: all 0.5s ease-in-out;
+
+            }
+
+            &::before {
+                transform: translateY(-12px)
+            }
+
+            &::after {
+                transform: translateY(12px)
+            }
+        }
+    }
+}
